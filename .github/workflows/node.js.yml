@@ -12,6 +12,8 @@ jobs:
     steps:
         - name: npm install and build webpack
           run: |
+            pwd
+            ls -al
             npm install
             npm run build
         - uses: actions/upload-artifact@main
