@@ -3,11 +3,8 @@
 
 name: Node CI
 
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+on: [push]
+
 
 jobs:
   build:
@@ -18,7 +15,7 @@ jobs:
             npm install
             npm run build
             ls -al public
-        - uses: actions/upload-artifact@master
+        - uses: actions/upload-artifact@main
           with:
             name: webpack artifacts
             path: public/
